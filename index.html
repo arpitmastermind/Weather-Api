@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Nevigate </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-image: url("bg1.jpg");
+        background-size: cover;
+        
+    }
+    h2{
+        color: white;
+    }
+        /* CSS for the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Styling for links in the footer */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Change link color on hover */
+        footer a:hover {
+            color: #00f;
+        }
+
+        footer {
+           position: fixed;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           background-color: #333;
+           color: #fff;
+           text-align: center;
+           padding: 20px;
+        }
+        #container{
+            margin: 5px;
+        }
+        #box{
+            padding: 55px;
+            margin-left: 55px;
+        }
+    
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather Live </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    
+                            
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="box"></div>
+    <h2 class="my-4 text-center">Weather for <span id="cityName"></span></h2>
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3" id="box3">
+                        <h4 class="my-0 fw-normal">Temprature</h4>
+                    </div>
+                    <div class="card-body" id="box1">
+                        <li>Temprature is </span></li>
+                        <h1 class="card-title pricing-card-title"><span id="temp"></span><small
+                                class="text-body-secondary fw-light"> °C</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+
+                            <li>Min Temprature is <span id="min_temp"></span>°C</li>
+                            <li>Max Temprature is <span id="max_temp"></span>°C</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col"id="box2" >
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Cloud</h4>
+                    </div>
+                    <div class="card-body">
+                        <li>Cloud Pct is </li>
+                        <h1 class="card-title pricing-card-title"><span id="cloud_pct"></span><small
+                                class="text-body-secondary fw-light">%</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Feels like <span id="feels_like"></span></li>
+                            <li>Humidity is <span id="humidity"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                        <h4 class="my-0 fw-normal">Wind</h4>
+                    </div>
+                    <div class="card-body">
+                        <li>Wind Speed is </li>
+                        <h1 class="card-title pricing-card-title"><span id="wind_speed"></span><small
+                                class="text-body-secondary fw-light">Km/Hr</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>wind Degree is <span id="wind_degrees"></span></li>
+                            <li>Sunrise Time is <span id="sunrise"></span></li>
+                            <li>Sunset Time is <span id="sunset"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="s1">
+            <p>Contact us at <a href="mailto:arpitsharma7583@gmail.com">arpitsharma7583@gmail.com</a></p>
+        </footer>    
+        
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="api.js"></script>
+</body>
+
+
+</html>
